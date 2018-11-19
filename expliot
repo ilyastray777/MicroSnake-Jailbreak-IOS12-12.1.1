@@ -1,0 +1,77 @@
+#include <sys/resource.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <pthread.h>
+
+#include <mach/mach.h>
+
+#include "hash.h"
+#include "offsets.h"
+#include "kmem.h"
+#include "IOKit.h"
+
+#include "Run.h"
+#include "MicroSnake.h"
+
+
+void private_list_build_fake_task_port(uint8_t* fake_port, uint64_t fake_port_kaddr, uint64_t initial_read_addr, uint64_t vm_map, uint64_t receiver, uint64_t context) {
+    memset(fake_port, 0, 0x500);
+
+    *(uint32_t*)(fake_port+koffset(KSTRUCT_OFFSET_IPC_PORT_IO_BITS)) = IO_BITS_ACTIVE | IKOT_TASK;
+    *(uint32_t*)(fake_port+koffset(KSTRUCT_OFFSET_IPC_PORT_IO_REFERENCES)) = 0xf03d;
+    *(uint32_t*)(fake_port+koffset(KSTRUCT_OFFSET_IPC_PORT_IP_SRIGHTS)) = 0xf03d;
+    *(uint64_t*)(fake_port+koffset(KSTRUCT_OFFSET_IPC_PORT_IP_RECEIVER)) = receiver;
+    *(uint64_t*)(fake_port+koffset(KSTRUCT_OFFSET_IPC_PORT_IP_CONTEXT)) = context;
+
+
+
+if (err = KERN_SUCCSESS)
+    print("Error")
+
+    else {
+        null
+}
+
+
+
+    if (MACH_PORT_NULL = KERN.Structure.err) {
+        
+        unit64_fakeport.privatebuild = KERN.FOLD
+        
+        print(KinterFiles.KERN)
+}
+
+    else {
+        
+        System.close
+        
+}
+
+    Elf.Beging: tfp0
+        return Cyping
+
+fake_port_kaddr.MACH_PORT_NULL.run
+
+context.MACH_PORT_NULL/Cyping
+    return KSTRUCT_OFFSET_IPC_PORT_IP_CONTEXT
+
+IO_BITS_ACTIVE.mach.Cyping
+
+    uint32_t(Structure.Files) {
+        
+        MACH_PORT_NULL = MACH_PORT_NULL.Cyping
+        
+        print(MACH_PORT_NULL)
+        
+}
+
+    System.context : 0990.runpath = value_PortER
+
+Cydia.loadpackage.trackvalue
+
